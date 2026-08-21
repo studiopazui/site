@@ -1,0 +1,87 @@
+/*ANIMATION*/
+@keyframes slidefaderight {
+    from {opacity: 0;transform: translateX(-1em);}
+    to {opacity: 1;transform: translateX(0em);}
+}
+@keyframes slidefadeleft {
+    from {opacity: 0;transform: translateX(1em);}
+    to {opacity: 1;transform: translateX(0em);}
+}
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes zoom {
+    from{scale: 1;}
+    to{scale: 1.1;}
+}
+
+/*STRUCT*/
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    color: white;
+    background-color: #f67a22;
+    padding: 10px 0 10px 0;
+}
+footer {
+    display: flex;
+    color: white;
+    background-color: #f67a22;
+    padding: 25px 0 10px 0;
+    justify-content: center;
+    gap: 2em;
+}
+
+/*ELEMENTS*/
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+nav a {
+    color: white;
+}
+nav a:hover {
+    color: grey;
+}
+
+/*CLASSES*/
+.leftAnim{
+    animation: slidefadeleft 1s ease-in-out;
+}
+.rightAnim{
+        animation: slidefaderight 1s ease-in-out;
+}
+.fullscreen {
+    width: 100%;
+    height: auto;
+}
+.flexbar {
+    display: flex;
+    justify-content: space-between;
+    margin: min(2em,2%) min(10em,8%) min(2em,2%) min(10em,8%);
+    text-justify: center;
+    animation: fade 1s ease-in-out;
+}
+.zoom {
+    &:hover{
+        animation: zoom 200ms ease;
+    }
+}
+.grille {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+}
+.video {
+    width: 35%;
+    aspect-ratio: 16/9;
+}
+#logo {
+    padding: 10px 0 0 25px;
+}
